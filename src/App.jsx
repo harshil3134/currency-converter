@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import InputBox from './components/InputBox';
 import useCurrencyinfo from './hooks/useCurrencyinfo';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [amount, setAmount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
     <div
       className="flex flex-col items-center justify-center min-h-screen p-8 bg-gradient-to-br from-blue-500 via-teal-400 to-purple-500"
     >
+<Analytics />
       <div className="text-center mb-8">
         <h1 className="text-5xl font-bold text-white drop-shadow-lg">
           Currency Converter
